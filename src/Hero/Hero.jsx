@@ -9,21 +9,27 @@ const ImageList = [
   {
     id: 1,
     img: image4,
-    description: "tyui",
+    title: "Where Every Print Tells a Story",
+    description:
+      "Bcean Media involves producing physical copies of digital or physical content such as Producing business materials, marketing materials and other commercial prints.Printing digital files directly onto paper or other materials and also creating unique prints,such as large-format prints,labels, or Packaging materials,banner, note pad, umbrella etc.",
   },
   {
     id: 2,
     img: image9,
-    description: "jhuik",
+    title: "Making Memories, One Home at a Time",
+    description:
+      "Bcean is a trusted real estate realtor dedicated to helping individual and families find their dream homes. With a pasion for delivering exception results and a commitment to building lasting relationships, we provide personalized real estate services that cater to the unique needs of our clients.Our expertise,local knowledge, and innovative approach ensure that every transaction is seamless and successful",
   },
   {
     id: 3,
     img: image13,
-    description: "hjj",
+    title: "Reduce Your Energy Bills, Increase Your Saving",
+    description:
+      "Bcean is a leading provider of solar energy solution,partnering with GreatWall company,dedicated to helping homeowners and businesses harness the power of the sun. With a commitment to innovation,quality, and customer satisfaction. We sale,install and maintain solar panel systems that reduce energy costs and promote sustainability. Our expert team provides personalized service,ensuring a seamless experience from consultation to installation and beyond",
   },
 ];
 
-const Hero = () => {
+const Hero = ({ handleOrderPopup }) => {
   var settings = {
     dots: false,
     arrows: false,
@@ -37,9 +43,9 @@ const Hero = () => {
     pauseOnFocus: true,
   };
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] flex justify-center items-center dark:bg-gray-200 dark:text-white bg-white-200  duration-200 ">
+    <div className="relative min-h-[550px] sm:min-h-[650px] flex justify-center items-center dark:bg-white dark:text-white bg-white-200  duration-200 ">
       {/* background pattern*/}
-      <div className="h-[700px] w-[700px] dark:bg-orange-500/20 absolute -top-1/1 right-0 rounded-3xl rotate-45 z-10"></div>
+
       {/* hero section */}
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
@@ -47,12 +53,12 @@ const Hero = () => {
             <div>
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* text content section*/}
-                <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
+                <div className="flex flex-col justify-center gap-8  pt-8 sm:pt-0 text-center sm:text-left order-2  sm:order-1 relative  z-10">
                   <h1
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold  text-black"
+                    className="text-5xl sm:text-6xl lg:text-6xl font-bold  text-black"
                   >
                     {data.title}
                   </h1>
@@ -60,12 +66,18 @@ const Hero = () => {
                     data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="100"
-                    className="text-sm text-black"
+                    className="text-sm text-black mb-3"
                   >
                     {data.description}
                   </p>
                   <div>
-                    <button className="bg-gradient-to-r from-orange-700 to-orange-400 hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
+                    <button
+                      className="bg-gradient-to-r from-orange-700 to-orange-400 hover:scale-105 duration-200 text-white py-2 px-8 rounded-full"
+                      onClick={() => handleOrderPopup()}
+                      data-aos="zoom-in"
+                      data-aos-duration="500"
+                      data-aos-once="true"
+                    >
                       Order Now
                     </button>
                   </div>
@@ -81,7 +93,7 @@ const Hero = () => {
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-125 object-contain mx-auto rounded-md z-10"
+                      className="w-[350px] h-[300px] sm:h-[450px] sm:w-[500px] sm:scale-125  object-contain mx-auto rounded-md z-10"
                     />
                   </div>
                 </div>

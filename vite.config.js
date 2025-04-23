@@ -7,18 +7,6 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
-  theme: {
-    screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "976px",
-    },
-    extend: {
-      colors: {
-        primary: "orange",
-        secondary: "#ed8900",
-      },
-    },
-  },
+
   plugins: [react(), tailwindcss()],
 });

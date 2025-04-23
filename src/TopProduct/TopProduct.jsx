@@ -29,12 +29,12 @@ const ProductsData = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiushod tempor ut labore et dolore magne aliqua.",
   },
 ];
-const TopProduct = () => {
+const TopProduct = ({ handleOrderPopup }) => {
   return (
     <div>
-      <div className="contain">
+      <div className="">
         {/*Header section */}
-        <div className="text-left mb-24">
+        <div className="text-center mb-24">
           <p
             data-aos="fade-up"
             className="text-sm text-primary text-orange-600 font-bold"
@@ -50,7 +50,7 @@ const TopProduct = () => {
           </p>
         </div>
         {/*Body section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-10 gap-20 md:gap-0 place-items-center mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-10 gap-12 md:gap-0 place-items-center mb-24">
           {ProductsData.map((data) => (
             <div
               className="
@@ -78,7 +78,10 @@ const TopProduct = () => {
                 <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-4">
                   {data.description}
                 </p>
-                <button className="bg-orange-300 hover:scale-105 duration-300 text-black py-1 px-4 rounded-full mt-4 font-weight-800 group-hover:bg-white group-hover:text-orange">
+                <button
+                  className="bg-orange-300 hover:scale-105 duration-300 text-black py-1 px-4 rounded-full mt-4 font-weight-800 group-hover:bg-white group-hover:text-orange "
+                  onClick={() => handleOrderPopup()}
+                >
                   Order Now
                 </button>
               </div>
