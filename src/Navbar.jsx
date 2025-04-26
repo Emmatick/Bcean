@@ -56,7 +56,7 @@ const Navbar = ({ handleOrderPopup }) => {
     <div className="shadow-md bg-white dark:bg-orange-400 dark:text-white duration-200 relative  z-40">
       {/* upper Navbar */}
       <div className="bg-orange/40 py-4 ">
-        <div className="container flex justify-between items-center ml-18">
+        <div className="container flex justify-between items-center ml-10">
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
               <img src={Logo} alt="logo" className="w-10 " />
@@ -81,7 +81,7 @@ text-black rounded-lg
           {/* order button */}
           <button
             onClick={() => handleOrderPopup()}
-            className="  to-secondary transition-all duration-200 bg-black text-white py-1 px-5  rounded-full flex items-center gap-3 group"
+            className="  to-secondary transition-all duration-200 bg-black text-white py-1 px-2  rounded-full flex items-center ml-5 gap-3 group"
           >
             <span className="group-hover:block transition-all duration-200">
               Order
