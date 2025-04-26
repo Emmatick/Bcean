@@ -10,7 +10,7 @@ const ProductsData = [
     img: image13,
     title: "Solar Battery",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiushod tempor ut labore et dolore magne aliqua.",
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiushod tempor ut labore et dolo.",
   },
 
   {
@@ -18,7 +18,7 @@ const ProductsData = [
     img: image9,
     title: "Solar Battery",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiushod tempor ut labore et dolore magne aliqua.",
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiushod tempor ut labore et dolo.",
   },
 
   {
@@ -26,7 +26,7 @@ const ProductsData = [
     img: image13,
     title: "Solar Battery",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiushod tempor ut labore et dolore magne aliqua.",
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiushod tempor ut labor.",
   },
 ];
 const TopProduct = ({ handleOrderPopup }) => {
@@ -50,7 +50,7 @@ const TopProduct = ({ handleOrderPopup }) => {
           </p>
         </div>
         {/*Body section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-10 gap-12 md:gap-0 place-items-center mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-10 gap-20 md:gap-5 place-items-center mb-24">
           {ProductsData.map((data) => (
             <div
               className="
@@ -58,11 +58,11 @@ const TopProduct = ({ handleOrderPopup }) => {
             hover:text-white relative shadow-xl duration-400 group z-10 max-w-[300px]"
             >
               {/* image section */}
-              <div className="h-[100px]">
+              <div className="h-[100px] ">
                 <img
                   src={data.img}
                   alt=""
-                  className="max-w-[160px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
+                  className="max-w-[120px] block mx-auto transform -translate-y-10 group-hover:scale-105 duration-300 drop-shadow-md"
                 />
               </div>
               {/* Details section */}
@@ -74,7 +74,7 @@ const TopProduct = ({ handleOrderPopup }) => {
                   <FaStar className="text-yellow-500" />
                   <FaStar className="text-yellow-500" />
                 </div>
-                <h1 className="text-xl font-bold">{data.title}</h1>
+                <h1 className="text-m bg-black-200 font-bold">{data.title}</h1>
                 <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-4">
                   {data.description}
                 </p>
